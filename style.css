@@ -758,8 +758,8 @@ h3 {
 
 .contact-icon {
   flex: 0 0 auto;
-  display: inline-grid;
-  place-items: center;
+  position: relative;
+  display: inline-block;
   width: 34px;
   height: 34px;
   color: var(--blue-dark);
@@ -767,19 +767,52 @@ h3 {
   border-radius: 12px;
 }
 
+.contact-icon.email::before {
+  content: "";
+  position: absolute;
+  inset: 10px 8px;
+  border: 1.8px solid currentColor;
+  border-radius: 4px;
+}
+
+.contact-icon.email::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  width: 14px;
+  height: 9px;
+  border-right: 1.8px solid currentColor;
+  border-bottom: 1.8px solid currentColor;
+  transform: rotate(45deg) skew(-10deg, -10deg);
+  transform-origin: center;
+}
+
 .contact-icon.whatsapp {
   color: #0f7b4c;
   background: rgba(40, 180, 107, 0.12);
 }
 
-.contact-icon svg {
-  width: 19px;
-  height: 19px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.7;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.contact-icon.whatsapp::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1.8px solid currentColor;
+  border-radius: 50%;
+}
+
+.contact-icon.whatsapp::after {
+  content: "";
+  position: absolute;
+  left: 13px;
+  top: 12px;
+  width: 9px;
+  height: 9px;
+  border-left: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  border-radius: 2px 0 2px 6px;
+  transform: rotate(-35deg);
+  box-shadow: -5px 9px 0 -3px currentColor;
 }
 
 .site-footer {
