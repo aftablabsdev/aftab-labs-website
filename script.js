@@ -71,3 +71,30 @@ if ("IntersectionObserver" in window) {
 } else {
   revealItems.forEach((item) => item.classList.add("is-visible"));
 }
+
+const contactForm = document.querySelector("[data-contact-form]");
+const formStatus = document.querySelector("[data-form-status]");
+
+if (contactForm && formStatus) {
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    formStatus.textContent = "Sending your enquiry…";
+    const submitButton = contactForm.querySelector("button[type=submit]");
+    if (submitButton) submitButton.disabled = true;
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: "POST",
+        headers: { "Accept": "application/json" },
+        body: new FormData(contactForm),
+      });
+      const result = await response.json();
+      formStatus.textContent = response.ok ? result.message : (result.error || "We could not send your enquiry. Please email us directly.");
+      if (response.ok) contactForm.reset();
+    } catch {
+      formStatus.textContent = "We could not send your enquiry. Please email info@aftablabs.com directly.";
+    } finally {
+      if (submitButton) submitButton.disabled = false;
+    }
+  });
+}
