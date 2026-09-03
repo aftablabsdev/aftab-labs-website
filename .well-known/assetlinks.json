@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.aftablabs.hisabapp",
+      "sha256_cert_fingerprints": [
+        "E7:D2:25:35:C3:B4:9E:3E:39:EF:BD:0F:37:C4:BA:A8:17:A6:BB:E7:B3:D4:DC:59:BE:DE:EE:BF:A6:FD:EA:3B"
+      ]
+    }
+  }
+]
