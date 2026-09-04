@@ -6,15 +6,28 @@ Internal planning document. This roadmap must not be displayed or linked from th
 
 Convert the current single-page static website into a proper multi-page static website while continuing to use Cloudflare Pages Free and the existing GitHub-based deployment.
 
-## Planned page structure
+## Current page structure
 
 - Home — shorter introduction and navigation hub
+- Products — portfolio hub with current status for every product
 - HisabApp — dedicated SEO-focused product page
-- WorkLedger ERP — dedicated SEO-focused product page
+- Modulora ERP — dedicated SEO-focused product page; renamed from WorkLedger ERP
+- Learnova — dedicated product direction page
+- Nexora ERP — dedicated planning and feasibility page
 - Services
 - About
 - Contact
 - Privacy
+
+The former `workledger-erp.html` route should remain as a permanent redirect to `modulora-erp.html` so existing links and search history continue to resolve.
+
+## Current public product status
+
+- HisabApp production is version 1.3.11 on Google Play. Present Offline as available now; present Online multi-role, multi-device, web, digital storefront, desktop, and future Apple distribution according to their actual staged status.
+- Modulora ERP is the new product name for WorkLedger ERP. Android and web clients are in pre-release testing; Windows is the next planned desktop target, followed by macOS and future app-store distribution after platform readiness.
+- Learnova is under development, beginning with curriculum, learner-experience, mastery, parent-visibility, safety, and Early Years foundations.
+- Nexora ERP is a separate planned product direction. It remains in feasibility and MVP planning subject to accounting, UAE localization, licensing, security, operations, and pilot gates.
+- Public pages may summarize product direction and latest updates, but must not expose internal roadmaps, security details, infrastructure identifiers, credentials, or unapproved release commitments.
 
 ## Product page requirements
 

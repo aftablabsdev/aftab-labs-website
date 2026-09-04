@@ -1,12 +1,16 @@
 # Aftab Labs website
 
-Official static website for Aftab Labs, HisabApp Accounting & Stock, WorkLedger ERP, and related technology services.
+Official static website for Aftab Labs, HisabApp, Modulora ERP, Learnova, Nexora ERP, and related technology services.
 
 ## Public pages
 
 - `index.html` — homepage and navigation hub
+- `products.html` — complete product portfolio and current status
 - `hisabapp.html` — HisabApp product page
-- `workledger-erp.html` — WorkLedger ERP product page
+- `modulora-erp.html` — Modulora ERP product page
+- `learnova.html` — Learnova product page
+- `nexora-erp.html` — Nexora ERP planning page
+- `workledger-erp.html` — legacy redirect to Modulora ERP
 - `services.html` — technology services
 - `about.html` — company information
 - `contact.html` — contact details and project enquiry form

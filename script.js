@@ -2,6 +2,7 @@ const header = document.querySelector("[data-header]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const navMenu = document.querySelector("[data-nav-menu]");
 const year = document.querySelector("[data-year]");
+const productMenus = document.querySelectorAll("[data-product-menu]");
 
 if (year) {
   year.textContent = new Date().getFullYear();
@@ -13,6 +14,7 @@ const closeMenu = () => {
   navToggle.setAttribute("aria-expanded", "false");
   navMenu.classList.remove("is-open");
   document.body.classList.remove("nav-open");
+  productMenus.forEach((menu) => menu.removeAttribute("open"));
 };
 
 if (navToggle && navMenu) {
@@ -28,6 +30,27 @@ if (navToggle && navMenu) {
     link.addEventListener("click", closeMenu);
   });
 }
+
+productMenus.forEach((menu) => {
+  menu.addEventListener("toggle", () => {
+    if (!menu.open) return;
+    productMenus.forEach((otherMenu) => {
+      if (otherMenu !== menu) otherMenu.removeAttribute("open");
+    });
+  });
+});
+
+document.addEventListener("click", (event) => {
+  productMenus.forEach((menu) => {
+    if (menu.open && !menu.contains(event.target)) menu.removeAttribute("open");
+  });
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape") return;
+  productMenus.forEach((menu) => menu.removeAttribute("open"));
+  closeMenu();
+});
 
 const updateHeader = () => {
   if (!header) return;
