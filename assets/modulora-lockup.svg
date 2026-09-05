@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 400" role="img" aria-labelledby="title desc">
+  <title id="title">Modulora primary logo</title>
+  <desc id="desc">The Modulora modular M and central cube with its wordmark.</desc>
+  <g transform="translate(28 8) scale(.75)" stroke="#FAFAF7" stroke-linejoin="round" stroke-width="10">
+    <path d="M54 126 186 50l66 38-132 76Z" fill="#18C7BE"/>
+    <path d="m260 88 66-38 132 76-66 38Z" fill="#082B5C"/>
+    <path d="m54 142 66 38v148l-66 38Z" fill="#082B5C"/>
+    <path d="m54 382 66-38v92l-66 38Z" fill="#18C7BE"/>
+    <path d="m392 180 66-38v224l-66-38Z" fill="#082B5C"/>
+    <path d="m392 344 66 38v92l-66-38Z" fill="#2563EB"/>
+    <path d="m190 220 66-38 66 38-66 38Z" fill="#2563EB"/>
+    <path d="m190 236 58 34v76l-58-34Z" fill="#18C7BE"/>
+    <path d="m264 270 58-34v76l-58 34Z" fill="#082B5C"/>
+  </g>
+  <text x="440" y="260" fill="#082B5C" font-family="Inter, Avenir Next, Arial, sans-serif" font-size="184" font-weight="650" letter-spacing="-6">Modulora</text>
+</svg>

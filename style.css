@@ -1000,6 +1000,31 @@ h3 {
   object-fit: contain;
 }
 
+.product-brand-lockup {
+  display: grid;
+  place-items: center;
+  width: min(220px, 100%);
+  min-height: 70px;
+  padding: 12px 16px;
+  background: #fafaf7;
+  border: 1px solid rgba(8, 43, 92, 0.14);
+  border-radius: 18px;
+}
+
+.product-brand-lockup img {
+  width: 100%;
+  height: auto;
+}
+
+.modulora-hero-logo {
+  width: min(340px, 100%);
+  margin-bottom: 6px;
+  padding: 14px 18px;
+  background: #fafaf7;
+  border: 1px solid rgba(8, 43, 92, 0.14);
+  border-radius: 18px;
+}
+
 .product-icon {
   color: var(--blue-dark);
   font-weight: 900;
