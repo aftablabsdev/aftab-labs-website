@@ -3,6 +3,13 @@
   "main": "worker.js",
   "keep_vars": true,
   "compatibility_date": "2026-09-04",
+  "vars": {
+    "SITE_ORIGIN": "https://aftablabs.com",
+    "CONTACT_FROM_EMAIL": "no-reply@aftablabs.com",
+    "CONTACT_TO_EMAIL": "info@aftablabs.com",
+    "CONTACT_REPLY_TO_EMAIL": "info@aftablabs.com",
+    "CONTACT_CONFIRMATION_TEMPLATE_ID": "1"
+  },
   "assets": {
     "directory": ".",
     "binding": "ASSETS",
