@@ -23,9 +23,14 @@ The site remains plain HTML, CSS, and JavaScript so it can deploy through the ex
 Cloudflare Pages serves `functions/api/contact.js` at `/api/contact`. Configure these environment variables in the Cloudflare Pages project before enabling production form delivery:
 
 - `SITE_ORIGIN` — the exact public origin, such as `https://aftablabs.com`
-- `CONTACT_WEBHOOK_URL` — a secret server-side delivery or storage webhook
+- `CONTACT_FROM_EMAIL` — the verified Brevo sender, such as `no-reply@aftablabs.com`
+- `CONTACT_TO_EMAIL` — the internal recipient for enquiries
+- `CONTACT_REPLY_TO_EMAIL` — the reply address used by the visitor confirmation
+- `CONTACT_CONFIRMATION_TEMPLATE_ID` — the numeric ID of the active Brevo acknowledgement template
+- `BREVO_API_KEY` — an encrypted secret used only by the Pages Function
+- `TURNSTILE_SECRET_KEY` — an encrypted secret used for mandatory server-side Turnstile validation
 
-The webhook URL must be stored as a Cloudflare secret and must never be added to frontend code or committed to the repository. Without it, the form returns a safe message directing visitors to email Aftab Labs.
+The public Turnstile site key is embedded in `contact.html`; the Brevo API key and Turnstile secret must never be added to frontend code or committed to the repository. The endpoint validates the form, honeypot, origin, payload size, Turnstile token, and a short abuse-prevention window before delivering the internal enquiry. It then sends a separate acknowledgement through the configured Brevo template.
 
 ## Internal planning
 

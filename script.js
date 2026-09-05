@@ -99,8 +99,23 @@ const contactForm = document.querySelector("[data-contact-form]");
 const formStatus = document.querySelector("[data-form-status]");
 
 if (contactForm && formStatus) {
+  const resetTurnstile = () => {
+    const widget = contactForm.querySelector(".cf-turnstile");
+    if (widget && window.turnstile && typeof window.turnstile.reset === "function") {
+      window.turnstile.reset(widget);
+    }
+  };
+
   contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
+    const formData = new FormData(contactForm);
+    if (!formData.get("cf-turnstile-response")) {
+      formStatus.dataset.state = "error";
+      formStatus.textContent = "Please complete the security check before sending your enquiry.";
+      return;
+    }
+
+    formStatus.dataset.state = "pending";
     formStatus.textContent = "Sending your enquiry…";
     const submitButton = contactForm.querySelector("button[type=submit]");
     if (submitButton) submitButton.disabled = true;
@@ -109,14 +124,17 @@ if (contactForm && formStatus) {
       const response = await fetch(contactForm.action, {
         method: "POST",
         headers: { "Accept": "application/json" },
-        body: new FormData(contactForm),
+        body: formData,
       });
-      const result = await response.json();
+      const result = await response.json().catch(() => ({}));
+      formStatus.dataset.state = response.ok ? "success" : "error";
       formStatus.textContent = response.ok ? result.message : (result.error || "We could not send your enquiry. Please email us directly.");
       if (response.ok) contactForm.reset();
     } catch {
+      formStatus.dataset.state = "error";
       formStatus.textContent = "We could not send your enquiry. Please email info@aftablabs.com directly.";
     } finally {
+      resetTurnstile();
       if (submitButton) submitButton.disabled = false;
     }
   });

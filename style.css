@@ -199,6 +199,31 @@ h3 {
   color: var(--blue-dark);
 }
 
+.form-status[data-state="success"] {
+  color: #0f7b4c;
+}
+
+.form-status[data-state="error"] {
+  color: #a52828;
+}
+
+.turnstile-field {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+  margin-top: 10px;
+}
+
+.turnstile-field .cf-turnstile {
+  width: 100%;
+  min-height: 65px;
+}
+
+.turnstile-field p {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
 .honeypot {
   position: absolute;
   width: 1px;
