@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 400" role="img" aria-labelledby="title desc">
-  <title id="title">Modulora horizontal logo</title>
-  <desc id="desc">The modular M and central cube beside the outlined Modulora wordmark.</desc>
-  <g transform="translate(28 8) scale(.75)" stroke="#FAFAF7" stroke-linejoin="round" stroke-width="10">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760" role="img" aria-labelledby="title desc">
+  <title id="title">Modulora stacked logo</title>
+  <desc id="desc">The modular M and central cube above the outlined Modulora wordmark.</desc>
+  <g transform="translate(194 30)" stroke="#FAFAF7" stroke-linejoin="round" stroke-width="10">
     <path d="M54 126 186 50l66 38-132 76Z" fill="#18C7BE"/>
     <path d="m260 88 66-38 132 76-66 38Z" fill="#082B5C"/>
     <path d="m54 142 66 38v148l-66 38Z" fill="#082B5C"/>
@@ -12,7 +12,7 @@
     <path d="m190 236 58 34v76l-58-34Z" fill="#18C7BE"/>
     <path d="m264 270 58-34v76l-58 34Z" fill="#082B5C"/>
   </g>
-  <g fill="#082B5C" transform="translate(440 260) scale(.184 -.184)" aria-label="Modulora">
+  <g fill="#082B5C" transform="translate(60 690) scale(.18 -.18)" aria-label="Modulora">
       <path d="M645 0H817V667H578L438 289L299 667H60V0H232V450L400 0H476L645 450Z" transform="translate(0 0)"/>
       <path d="M287 -12C453 -12 551 106 551 242C551 378 453 495 287 495C123 495 24 378 24 242C24 106 123 -12 287 -12ZM287 124C220 124 183 177 183 242C183 306 220 359 287 359C355 359 393 306 393 242C393 177 355 124 287 124Z" transform="translate(855 0)"/>
       <path d="M381 0H534V667H381V426C342 474 291 495 238 495C117 495 24 400 24 242C24 78 119 -12 238 -12C292 -12 341 10 381 56ZM381 168C361 142 321 124 288 124C227 124 182 170 182 242C182 314 227 359 288 359C321 359 361 342 381 316Z" transform="translate(1409 0)"/>
