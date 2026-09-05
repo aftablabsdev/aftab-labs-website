@@ -16,11 +16,11 @@ Official static website for Aftab Labs, HisabApp, Modulora ERP, Learnova, Nexora
 - `contact.html` — contact details and project enquiry form
 - `privacy.html` — website privacy summary and link to the published HisabApp privacy policy
 
-The site remains plain HTML, CSS, and JavaScript so it can deploy through the existing GitHub integration on Cloudflare Pages Free.
+The site remains plain HTML, CSS, and JavaScript so it can deploy through the existing GitHub integration on Cloudflare's free Workers/Pages-compatible static hosting. `wrangler.json` keeps the site static and routes only `/api/*` through the lightweight Worker runtime.
 
 ## Contact endpoint
 
-Cloudflare Pages serves `functions/api/contact.js` at `/api/contact`. Configure these environment variables in the Cloudflare Pages project before enabling production form delivery:
+The Worker entrypoint serves the static files and routes `/api/contact` to `functions/api/contact.js`. Configure these environment variables in the Cloudflare project before enabling production form delivery:
 
 - `SITE_ORIGIN` — the exact public origin, such as `https://aftablabs.com`
 - `CONTACT_FROM_EMAIL` — the verified Brevo sender, such as `no-reply@aftablabs.com`

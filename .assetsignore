@@ -1,0 +1,14 @@
+.git
+.git/**
+.github
+.github/**
+functions
+functions/**
+tests
+tests/**
+worker.js
+wrangler.json
+README.md
+ROADMAP.md
+.DS_Store
+**/.DS_Store
