@@ -1071,6 +1071,41 @@ h3 {
   font-size: 0.98rem !important;
 }
 
+.youtube-banner {
+  display: block;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid rgba(219, 232, 244, 0.92);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.youtube-banner:hover,
+.youtube-banner:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 26px 64px rgba(24, 70, 128, 0.2);
+}
+
+.youtube-banner:focus-visible {
+  outline: 3px solid rgba(29, 124, 242, 0.38);
+  outline-offset: 4px;
+}
+
+.youtube-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.youtube-feature-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
 .release-note {
   margin-top: 14px !important;
   font-size: 0.92rem !important;
